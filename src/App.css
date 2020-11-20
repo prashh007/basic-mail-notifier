@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+* {
+  padding: 0px;
+  margin: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #daebf6;
+  height: 60px;
+  position: relative;
+}
+.readColor {
+  background-color: #eee !important;
+}
+.icon {
+  cursor: pointer;
+  margin-right: 50px;
+  /* line-height: 60px; */
+}
+.icon span {
+  background: #f00;
+  padding: 4px 8px;
+  border-radius: 50%;
+  color: #fff;
+  vertical-align: top;
+  margin-left: -6px;
+  position: absolute;
+  top: 4px;
+}
+.icon img {
+  display: inline-block;
+  width: 40px;
+  margin-top: 20px;
+}
+.icon:hover {
+  opacity: 0.7;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  flex: 1;
+  margin-left: 50px;
+  font-size: 20px;
+  font-family: monospace;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notifi-box {
+  width: 300px;
+  height: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 63px;
+  right: 35px;
+  transition: 1s opacity, 50ms height;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.notifi-box h2 {
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: #999;
+}
+.notifi-box h2 span {
+  color: #f00;
+}
+.notifi-item {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 15px 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.notifi-item:hover {
+  background-color: #eee;
+}
+.notifi-item img {
+  display: block;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.notifi-item .text h4 {
+  color: #777;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.notifi-item .text p {
+  color: #aaa;
+  font-size: 12px;
 }
